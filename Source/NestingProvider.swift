@@ -58,7 +58,7 @@ public struct NestingProvider: ViewProvider {
         }
     }
 
-    public func size(for width: CGFloat) -> CGSize {
+    public func boundingSize(widthConstraint width: CGFloat) -> CGSize {
         let height = configs.reduce(0) { $0 + (try! ETMultiColumnView.height(with: $1, width: width)) }
         return CGSize(width: width, height: height)
     }
