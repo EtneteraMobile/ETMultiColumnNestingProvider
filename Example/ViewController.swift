@@ -47,7 +47,7 @@ struct PlaceholderProvider: ViewProvider {
 
     func customize(view view: UIView) {}
 
-    func size(for width: CGFloat) -> CGSize {
+    func boundingSize(widthConstraint width: CGFloat) -> CGSize {
         return CGSize(width: width, height: width)
     }
 }

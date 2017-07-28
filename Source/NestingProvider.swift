@@ -52,17 +52,18 @@ public struct NestingProvider: ViewProvider {
         var lastBottom: CGFloat = 0.0
         for (view, config) in zip(subviews, configs) {
             view.frame = CGRect(origin: view.frame.origin, size: CGSize(width: superview.frame.width, height: view.frame.height))
-            try! view.customize(with: config)
-            view.frame = CGRect(origin: CGPoint(x: view.frame.origin.x, y: lastBottom), size: view.frame.size)
-            lastBottom += view.frame.size.height
+            do {
+                try view.customize(with: config)
+                view.frame = CGRect(origin: CGPoint(x: view.frame.origin.x, y: lastBottom), size: view.frame.size)
+                lastBottom += view.frame.size.height
+            } catch {
+                view.frame = CGRect(origin: CGPoint(x: view.frame.origin.x, y: lastBottom), size: .zero)
+            }
         }
     }
 
     public func boundingSize(widthConstraint width: CGFloat) -> CGSize {
-        let height = configs.reduce(0) { $0 + (try! ETMultiColumnView.height(with: $1, width: width)) }
+        let height = configs.reduce(0) { $0 + ((try? ETMultiColumnView.height(with: $1, width: width)) ?? 0.0) }
         return CGSize(width: width, height: height)
     }
-
-    // MARK: -
-
 }
