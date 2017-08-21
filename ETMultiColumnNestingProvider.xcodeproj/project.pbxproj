@@ -14,8 +14,6 @@
 		7114EDA21E921197009D7E8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7114EDA01E921197009D7E8A /* LaunchScreen.storyboard */; };
 		7114EDA71E921375009D7E8A /* ETMultiColumnView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C68E401E8E8BFD003DC61F /* ETMultiColumnView.framework */; };
 		7114EDA81E921375009D7E8A /* ETMultiColumnView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71C68E401E8E8BFD003DC61F /* ETMultiColumnView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7114EDAA1E921391009D7E8A /* ETMultiColumnLabelProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C68E461E8E9A19003DC61F /* ETMultiColumnLabelProvider.framework */; };
-		7114EDAC1E921394009D7E8A /* ETMultiColumnLabelProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71C68E461E8E9A19003DC61F /* ETMultiColumnLabelProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		71C68E3E1E8E8AD6003DC61F /* ETMultiColumnNestingProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 71C68E3C1E8E8AD6003DC61F /* ETMultiColumnNestingProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71C68E411E8E8BFD003DC61F /* ETMultiColumnView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C68E401E8E8BFD003DC61F /* ETMultiColumnView.framework */; };
 		71C68E431E8E8C0C003DC61F /* NestingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C68E421E8E8C0C003DC61F /* NestingProvider.swift */; };
@@ -29,7 +27,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				7114EDA81E921375009D7E8A /* ETMultiColumnView.framework in Embed Frameworks */,
-				7114EDAC1E921394009D7E8A /* ETMultiColumnLabelProvider.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,7 +46,6 @@
 		71C68E3D1E8E8AD6003DC61F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71C68E401E8E8BFD003DC61F /* ETMultiColumnView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ETMultiColumnView.framework; path = Carthage/Build/iOS/ETMultiColumnView.framework; sourceTree = "<group>"; };
 		71C68E421E8E8C0C003DC61F /* NestingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestingProvider.swift; sourceTree = "<group>"; };
-		71C68E461E8E9A19003DC61F /* ETMultiColumnLabelProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ETMultiColumnLabelProvider.framework; path = Carthage/Build/iOS/ETMultiColumnLabelProvider.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +54,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7114EDA71E921375009D7E8A /* ETMultiColumnView.framework in Frameworks */,
-				7114EDAA1E921391009D7E8A /* ETMultiColumnLabelProvider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +84,6 @@
 		71B7884F1E6D47C900F5D235 = {
 			isa = PBXGroup;
 			children = (
-				71C68E461E8E9A19003DC61F /* ETMultiColumnLabelProvider.framework */,
 				71C68E401E8E8BFD003DC61F /* ETMultiColumnView.framework */,
 				71C68E3A1E8E8AD6003DC61F /* Source */,
 				7114ED961E921197009D7E8A /* Example */,
@@ -189,6 +183,7 @@
 					};
 					71B788581E6D47C900F5D235 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -415,6 +410,7 @@
 				PRODUCT_NAME = ETMultiColumnNestingProvider;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -440,6 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cz.etnetera.ETMultiColumnNestingProvider;
 				PRODUCT_NAME = ETMultiColumnNestingProvider;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

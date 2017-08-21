@@ -26,7 +26,7 @@ public struct NestingProvider: ViewProvider {
 
     // MARK: private
 
-    private let configs: [ETMultiColumnView.Configuration]
+    fileprivate let configs: [ETMultiColumnView.Configuration]
 
     // MARK: - Initialization
 
@@ -44,8 +44,7 @@ public struct NestingProvider: ViewProvider {
 
     public func customize(view superview: UIView) {
         guard
-            let subviews = superview.subviews as? [ETMultiColumnView]
-            where subviews.count == configs.count else {
+            let subviews = superview.subviews as? [ETMultiColumnView], subviews.count == configs.count else {
             preconditionFailure("Expected: [ETMultiColumnView]")
         }
 
