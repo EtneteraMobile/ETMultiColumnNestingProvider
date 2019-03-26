@@ -10,9 +10,9 @@ import Foundation
 
 extension ETMultiColumnView {
 
-    public enum Error: Swift.ErrorType {
+    public enum Error: Swift.Error {
         case columnsCountMissmatch(description: String)
-        case invalidWidth()
+        case invalidWidth
         case insufficientWidth(description: String)
     }
 }

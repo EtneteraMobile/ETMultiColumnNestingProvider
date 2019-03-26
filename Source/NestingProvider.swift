@@ -21,7 +21,9 @@ public struct NestingProvider: ViewProvider {
     }
 
     public var hashValue: Int {
-        return configs.reduce(0) { $0 ^ $1.hashValue }
+        var hasher = Hasher()
+        hasher.combine(configs.hashValue)
+        return hasher.finalize()
     }
 
     // MARK: private
